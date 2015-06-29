@@ -8,13 +8,15 @@
   </div>
 </body>
 
-<template class="header" name="header">
-  <div class="left">
-    <h1>uberall</h1>
+<template name="header">
+  <div class="header">
+    <div class="left">
+      <h1>uberall</h1>
+    </div>
+    <div class="right">
+      {{> loginButtons}}
+    </div>
+    <div class="break"></div>
   </div>
-  <div class="right">
-    {{> loginButtons}}
-  </div>
-  <div class="break"></div>
 </template>
 
