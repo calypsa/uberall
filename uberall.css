@@ -1,7 +1,3 @@
-.accounts-dialog {
-  margin: 5px;
-}
-
 body {
   bottom: 0px;
   font-family: sans-serif;
@@ -35,10 +31,6 @@ body {
 .left {
   float: left;
   text-align: left;
-}
-
-#login-dropdown-list {
-  position: relative;
 }
 
 .right {
