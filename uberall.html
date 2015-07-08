@@ -1,22 +1,50 @@
 <head>
-  <title>uberall</title>
+    <title>uberall</title>
 </head>
 
 <body>
-  <div class="centered content">
-    {{> header}}
-  </div>
+    <div class="container">
+        {{> header}}
+        {{> main}}
+    </div>
+    {{> footer}}
 </body>
 
 <template name="header">
-  <div class="header">
-    <div class="left">
-      <h1>uberall</h1>
-    </div>
-    <div class="right">
-      {{> loginButtons align="right"}}
-    </div>
-    <div class="break"></div>
-  </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">uberall</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    {{> loginButtons}}
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </nav>
 </template>
 
+<template name="main">
+    <div class="jumbotron">
+        <h1>uberall</h1>
+        <p>Welcome</p>
+        <p>
+            <a class="btn btn-lg btn-primary" href="#" role="button">Go &raquo;</a>
+        </p>
+    </div>
+</template>
+
+<template name="footer">
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">0 users</div>
+                <div class="col-md-2">0 galaxies</div>
+                <div class="col-md-2">0 solar systems</div>
+                <div class="col-md-2">0 planets</div>
+                <div class="col-md-4 text-right">central galactic star time {{startime}}</div>
+            </div>
+        </div>
+    </footer>
+</template>
