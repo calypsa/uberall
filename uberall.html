@@ -25,11 +25,12 @@
 
 <template name="main">
     <div class="jumbotron">
-        <h1>uberall</h1>
-        <p>Willkommen</p>
-        <p>
-            <a class="btn btn-lg btn-primary" href="#" role="button">Weiter &raquo;</a>
-        </p>
+        {{#if isLoggedIn}}
+        Hi
+        {{else}}
+        <h1>Willkommen im uberall</h1>
+        <p>Bitte melde dich an, um zu deinem Schiff zu gelangen.</p>
+        {{/if}}
     </div>
 </template>
 
@@ -41,7 +42,7 @@
                 <div class="col-md-2">0 Sonnensysteme</div>
                 <div class="col-md-2">0 Planeten</div>
                 <div class="col-md-2">0 Schiffe</div>
-                <div class="col-md-4 text-right">Zentralgalaktische Sternenzeit: {{startime}}</div>
+                <div class="col-md-4 text-right">Zentralgalaktische Sternenzeit: {{starTime}}</div>
             </div>
         </div>
     </footer>
