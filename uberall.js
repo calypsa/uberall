@@ -20,9 +20,13 @@ if (Meteor.isClient) {
             return Galaxies.find().count();
         },
         starTime: function () {
-            return Math.round(new Date().getTime() / 1000 + 24 * 365 * 24 * 60 * 60); // time plus 24 years
+            return Session.get('startime');
         }
     });
+
+    setInterval(function () {
+        Session.set('startime', Math.round(new Date().getTime() / 1000 + 24 * 365 * 24 * 60 * 60));
+    }, 1000);
 }
 
 if (Meteor.isServer) {
