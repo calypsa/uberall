@@ -24,14 +24,14 @@
 </template>
 
 <template name="main">
+    {{#if currentUser}}
+    {{> starmap}}
+    {{else}}
     <div class="jumbotron">
-        {{#if currentUser}}
-        {{> starmap}}
-        {{else}}
         <h1>Willkommen im uberall</h1>
         <p>Bitte melde dich an, um zu deinem Schiff zu gelangen.</p>
-        {{/if}}
     </div>
+    {{/if}}
 </template>
 
 <template name="footer">
@@ -49,5 +49,5 @@
 </template>
 
 <template name="starmap">
-    <canvas class="starmap"></canvas>
+    <canvas id="starmap" class="starmap"></canvas>
 </template>
