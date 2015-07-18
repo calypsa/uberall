@@ -9,12 +9,6 @@ if (Meteor.isClient) {
         // noop
     });
 
-    Template.main.helpers({
-        isLoggedIn: function () {
-            return Meteor.user();
-        }
-    });
-
     Template.footer.helpers({
         galaxyCount: function () {
             return Galaxies.find().count();
